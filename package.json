@@ -1,0 +1,44 @@
+{
+  "name": "npm-publish-test",
+  "version": "0.1.0",
+  "description": "learning about npm publish",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/luizoamorim/npm-publish-test.git"
+  },
+  "keywords": [
+    "npm-publish-test"
+  ],
+  "author": "luizoamorim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizoamorim/npm-publish-test/issues"
+  },
+  "homepage": "https://github.com/luizoamorim/npm-publish-test#readme",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^29.1.2",
+    "babel-jest": "^29.1.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "jest": "^29.1.2",
+    "ts-node": "^10.9.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
