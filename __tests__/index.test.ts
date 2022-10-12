@@ -6,6 +6,6 @@ describe("test", () => {
   })
 
   it("test false", () => {
-    expect(isText("TEXT")).toBeFalsy();
+    expect(isText("TEX")).toBeFalsy();
   })
 })
