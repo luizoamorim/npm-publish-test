@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "repository": {
     "type": "git",
