@@ -1,17 +1,18 @@
 {
   "name": "npm-publish-test",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "learning about npm publish",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "prepare": "npx husky install"
+    "prepare": "npx husky install",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/luizoamorim/npm-publish-test.git"
+    "url": "https://github.com/luizoamorim/npm-publish-test.git"
   },
   "keywords": [
     "npm-publish-test"
@@ -36,11 +37,12 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.1",
     "jest": "^29.1.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "semantic-release": "^19.0.5"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }  
+  }
 }
