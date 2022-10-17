@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh '''
                 # Run optional required steps before releasing
-                npx semantic-release --branches master
+                npx semantic-release
                 '''
             }
         }
