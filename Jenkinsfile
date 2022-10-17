@@ -4,6 +4,11 @@ pipeline {
         GH_TOKEN  = credentials('GH_TOKEN')
     }
     stages {
+        stage('Checkout scm') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Test') {
             steps {
                 sh '''
@@ -20,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                 # Run optional required steps before releasing
-                npx semantic-release
+                GH_TOKEN=$GH_TOKEN npx semantic-release --branches develop
                 '''
             }
         }
