@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sh '''
                 # Run optional required steps before releasing
-                GH_TOKEN=$GH_TOKEN npx semantic-release --branches develop
+                GH_TOKEN=$GH_TOKEN npx semantic-release --branches origin/develop
                 '''
             }
         }
