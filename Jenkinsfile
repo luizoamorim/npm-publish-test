@@ -6,7 +6,10 @@ pipeline {
     stages {
         stage('Checkout scm') {
             steps {
-                checkout scm
+                checkout([$class: 'GitSCM',
+                    branches: [[name: 'develop']],
+                    userRemoteConfigs: [[credentialsId: 'jenkins-github',
+                                        url: 'git@github.com:luizoamorim/npm-publish-test.git']]])
             }
         }
         stage('Test') {
