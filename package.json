@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/luizoamorim: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/npm-publish-test.git"
+    "url": "git@github.com:luizoamorim/npm-publish-test.git"
   },
   "keywords": [
     "npm-publish-test"
@@ -34,8 +34,11 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.6",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/jest": "^29.1.2",
     "babel-jest": "^29.1.2",
     "cz-conventional-changelog": "^3.3.0",
