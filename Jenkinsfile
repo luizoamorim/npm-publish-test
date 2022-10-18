@@ -4,6 +4,14 @@ pipeline {
         GH_TOKEN  = credentials('GH_TOKEN')
     }
     stages {
+        stage('Checkout scm') {
+            steps {
+                checkout([$class: 'GitSCM',
+                    branches: [[name: 'develop']],
+                    userRemoteConfigs: [[credentialsId: 'jenkins-github',
+                                        url: 'git@github.com:luizoamorim/npm-publish-test.git']]])
+            }
+        }
         stage('Test') {
             steps {
                 sh '''
@@ -20,7 +28,7 @@ pipeline {
             steps {
                 sh '''
                 # Run optional required steps before releasing
-                npx semantic-release
+                GH_TOKEN=$GH_TOKEN npx semantic-release --branches origin/develop
                 '''
             }
         }
